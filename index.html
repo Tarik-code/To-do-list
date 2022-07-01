@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do list</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <header>
+      <div class="header-title">
+        <h1>To Do List</h1>
+      </div>
+    </header>
+    <main>
+      <div class="main-center">
+        <div class="main-title">
+          <h3 data-project="" id="inbox">Inbox</h3>
+          <div><button id="addTask">Add Task</button></div>
+        </div>
+        <div id="TaskFormHide">
+          <div class="addTaskSelection">
+            <form id="addTaskForm">
+              <input type="text" class="taskTitle" id="taskTitle" placeholder="Task" required>
+              <input type="text" class="taskDisc" id="taskDisc" placeholder="Description" required>
+          
+              <div>
+                <label for="dueDate">Due Date:</label>
+                <input type="date" class="dueDate" id="dueDate" name="dueDate" required>
+              </div>
+                <div class="priority-list">
+                  <label for="priority">Priority: </label>
+                  <select name="priority" id="priority">
+                    <option name="priority" value="Low">Select Priority</option>
+                    <option name="priority" value="Low">Low</option>
+                    <option name="priority" value="Medium">Medium</option>
+                    <option name="priority" value="Urgent">Urgent</option>
+                  </select>
+                </div>
+              <button id="submitAdd" type='button'><span class="material-symbols-outlined">add</span></button>
+            </form>
+          </div>
+        </div>
+        <div id="tasksDisplay"></div>
+     
+      </div>
+    </main>
+    <section>
+      <div class="main-section">
+        <h3>Your Tasks</h3>
+        <ul>
+          <li class="inbox-selection"><a href="#">Inbox</a></li>
+          <li class="today-selection"><a  href="#">Today</a></li>
+          <li class="week-selection"><a  href="#">This week</a></li>
+        </ul>
+      </div>
+      <div class="project-section">
+        <h3>Projects</h3>
+        <button id="add_project">Add a project</button>
+        <form action="" id="addProjectForm">
+          <input type="text" id="addPInput">
+          <button type='button' id="btnProject">Add</button>
+        </form>
+        <div class="projectList">
+          <ul class="listUl"></ul>
+        </div>
+      </div>
+    </section>
+    <script src="bundle.js"></script>
+  </body>
+</html>
